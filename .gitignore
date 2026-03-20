@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Intellij Junk
+.idea/
+
+# Going to make propper assets and commit them later
+temp_assets/

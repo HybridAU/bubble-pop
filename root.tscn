@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dujc35gm78qk8"]
+
+[ext_resource type="PackedScene" uid="uid://clrnn6vie8uxy" path="res://bubble.tscn" id="1_pq8q7"]
+
+[node name="Root" type="Node2D" unique_id=1242377538]
+
+[node name="Bubble" parent="." unique_id=643527387 instance=ExtResource("1_pq8q7")]
+position = Vector2(532, 1814)
+
+[node name="Bubble2" parent="." unique_id=962449782 instance=ExtResource("1_pq8q7")]
+position = Vector2(371, 1807)
