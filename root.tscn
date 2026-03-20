@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dujc35gm78qk8"]
 
-[ext_resource type="PackedScene" uid="uid://clrnn6vie8uxy" path="res://bubble.tscn" id="1_pq8q7"]
+[ext_resource type="Script" uid="uid://btsxrtwf5j0r" path="res://scripts/root.gd" id="1_pq8q7"]
 
 [node name="Root" type="Node2D" unique_id=1242377538]
+script = ExtResource("1_pq8q7")
 
-[node name="Bubble" parent="." unique_id=643527387 instance=ExtResource("1_pq8q7")]
-position = Vector2(532, 1814)
+[node name="BubbleSpawnTimer" type="Timer" parent="." unique_id=500036341]
+autostart = true
 
-[node name="Bubble2" parent="." unique_id=962449782 instance=ExtResource("1_pq8q7")]
-position = Vector2(371, 1807)
+[connection signal="timeout" from="BubbleSpawnTimer" to="." method="_on_bubble_spawn_timer_timeout"]

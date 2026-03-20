@@ -14,3 +14,7 @@ texture = ExtResource("1_n2mqj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1705877029]
 shape = SubResource("CircleShape2D_n2mqj")
+
+[node name="Timer" type="Timer" parent="." unique_id=1248990173]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
