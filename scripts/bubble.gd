@@ -24,5 +24,6 @@ func _input_event(viewport, event, shape_idx):
 	# Detect if screen is touched or mouse is clicked
 	if event is InputEventMouseButton or event is InputEventScreenTouch:
 		if event.pressed:
+			queue_free()
 			print("Sprite tapped!")
 			# Add tap logic here
