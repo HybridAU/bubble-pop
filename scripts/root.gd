@@ -17,5 +17,5 @@ func _on_bubble_spawn_timer_timeout() -> void:
 
 func spawn_bubble() -> void:
 	var new_bubble = bubble.instantiate()
-	new_bubble.position = Vector2(randf_range(100, 980), 1900)
+	new_bubble.position = Vector2(randf_range(100, get_viewport().size.x - 100), get_viewport().size.y - 100)
 	add_child(new_bubble)

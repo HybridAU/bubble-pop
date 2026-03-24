@@ -7,3 +7,6 @@
 
 # Going to make propper assets and commit them later
 temp_assets/
+
+# Output from building .apk files
+builds/
