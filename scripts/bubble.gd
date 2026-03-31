@@ -15,15 +15,10 @@ func _on_timer_timeout():
 	timer.start()
 
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	position.y -= vertical_speed * delta
 	position.x += horizonatal_speed * delta
 
 
-func _input_event(viewport, event, shape_idx):
-	# Detect if screen is touched or mouse is clicked
-	if event is InputEventMouseButton or event is InputEventScreenTouch:
-		if event.pressed:
-			queue_free()
-			print("Sprite tapped!")
-			# Add tap logic here
+func _on_body_entered(body: Node2D) -> void:
+	queue_free()
