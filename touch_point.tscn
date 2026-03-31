@@ -1,14 +1,27 @@
 [gd_scene format=3 uid="uid://dfpn72s4hn6ll"]
 
-[ext_resource type="Texture2D" uid="uid://d0refrb8a4pkk" path="res://icon.svg" id="1_5l33t"]
+[ext_resource type="Script" uid="uid://bnk8a3dnmek3n" path="res://scripts/trail.gd" id="2_nq6iu"]
+
+[sub_resource type="Curve" id="Curve_nq6iu"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_ee2ur"]
+offsets = PackedFloat32Array(0, 0.6938776, 1)
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.53061223, 0, 1, 1, 1, 0, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5l33t"]
-radius = 63.1981
+radius = 20.0
 
 [node name="TouchPoint" type="Node2D" unique_id=126556268]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=637942469]
-texture = ExtResource("1_5l33t")
+[node name="Trail" type="Line2D" parent="." unique_id=1374513920]
+top_level = true
+width = 20.0
+width_curve = SubResource("Curve_nq6iu")
+gradient = SubResource("Gradient_ee2ur")
+script = ExtResource("2_nq6iu")
+MAX_LENGTH = 15
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1236220287]
 
