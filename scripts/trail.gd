@@ -20,5 +20,5 @@ func _process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if event.is_released():
+		if event.is_released() or event.is_pressed():
 			queue.clear()

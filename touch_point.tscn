@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dfpn72s4hn6ll"]
 
+[ext_resource type="Texture2D" uid="uid://cb2w7d2kamdlt" path="res://assets/Touch Icon/touch.svg" id="1_nq6iu"]
 [ext_resource type="Script" uid="uid://bnk8a3dnmek3n" path="res://scripts/trail.gd" id="2_nq6iu"]
 
 [sub_resource type="Curve" id="Curve_nq6iu"]
@@ -15,13 +16,17 @@ radius = 20.0
 
 [node name="TouchPoint" type="Node2D" unique_id=126556268]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=208524434]
+texture = ExtResource("1_nq6iu")
+
 [node name="Trail" type="Line2D" parent="." unique_id=1374513920]
 top_level = true
+z_index = -1
 width = 20.0
 width_curve = SubResource("Curve_nq6iu")
 gradient = SubResource("Gradient_ee2ur")
 script = ExtResource("2_nq6iu")
-MAX_LENGTH = 15
+MAX_LENGTH = 20
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1236220287]
 

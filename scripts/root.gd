@@ -4,7 +4,7 @@ var bubble = preload("res://bubble.tscn")
 # Touch point
 var touch_point = preload("res://touch_point.tscn")
 var live_touch_point = touch_point.instantiate()
-var touch_position = 0
+var touch_position = Vector2(-20,-20)
 
 @onready var timer = $BubbleSpawnTimer
 
