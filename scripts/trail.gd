@@ -5,6 +5,9 @@ class_name Trails
 var queue: Array
 @export var MAX_LENGTH: int
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.is_released():
+			queue.clear()
 
 func _process(delta: float) -> void:
 	var pos = get_parent().position
@@ -17,8 +20,3 @@ func _process(delta: float) -> void:
 	
 	for point in queue:
 		add_point(point)
-
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if event.is_released() or event.is_pressed():
-			queue.clear()

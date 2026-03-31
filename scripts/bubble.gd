@@ -1,5 +1,7 @@
 extends Area2D
 
+var droplet = preload("res://droplet.tscn")
+
 var vertical_speed = 60
 var horizonatal_speed = 0
 
@@ -22,3 +24,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	queue_free()
+	for i in randi_range(10, 20):
+		var new_droplet = droplet.instantiate()
+		var root_node = get_parent()
+		new_droplet.position = position
+		root_node.add_child(new_droplet)
