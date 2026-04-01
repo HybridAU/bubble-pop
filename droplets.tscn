@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://o0qg52jfbrvr"]
+
+[ext_resource type="Texture2D" uid="uid://2s5krq250ra6" path="res://assets/Droplet/droplet.svg" id="1_c4ja4"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hqv47"]
+particle_flag_align_y = true
+particle_flag_disable_z = true
+angle_min = -179.99998
+angle_max = 180.00002
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 300.0
+initial_velocity_max = 400.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.099999994
+scale_max = 0.19999999
+
+[node name="Droplets" type="Node2D" unique_id=1311663594]
+
+[node name="Droplets" type="GPUParticles2D" parent="." unique_id=1574173926]
+emitting = false
+amount = 20
+texture = ExtResource("1_c4ja4")
+one_shot = true
+explosiveness = 1.0
+randomness = 0.33
+process_material = SubResource("ParticleProcessMaterial_hqv47")
