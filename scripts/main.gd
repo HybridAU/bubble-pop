@@ -1,12 +1,16 @@
-extends Node2D
+extends Node
 var bubble = preload("res://bubble.tscn")
 
 # Touch point
 var touch_point = preload("res://touch_point.tscn")
 var live_touch_point = touch_point.instantiate()
-var touch_position = Vector2(get_viewport().size.x / 2, get_viewport().size.y / 2)
+var touch_position = Vector2(0,0)
+
 
 @onready var timer = $BubbleSpawnTimer
+
+func _ready() -> void:
+	touch_position = Vector2(get_viewport().size.x / 2, get_viewport().size.y / 2)
 
 func _input(event: InputEvent) -> void:
 	touch_position=event.position

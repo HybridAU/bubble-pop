@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bugmhdtt5yt32"]
+
+[ext_resource type="Script" uid="uid://btsxrtwf5j0r" path="res://scripts/main.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node" unique_id=804394807]
+script = ExtResource("1_ig7tw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=102970302]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0013367112, 0.095184214, 0.2227821, 1)
+
+[node name="BubbleSpawnTimer" type="Timer" parent="." unique_id=68294711]
+autostart = true
+
+[connection signal="timeout" from="BubbleSpawnTimer" to="." method="_on_bubble_spawn_timer_timeout"]

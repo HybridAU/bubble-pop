@@ -17,11 +17,11 @@ radius = 20.0
 [node name="TouchPoint" type="Node2D" unique_id=126556268]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=208524434]
+z_index = 1
 texture = ExtResource("1_nq6iu")
 
 [node name="Trail" type="Line2D" parent="." unique_id=1374513920]
 top_level = true
-z_index = -1
 width = 20.0
 width_curve = SubResource("Curve_nq6iu")
 gradient = SubResource("Gradient_ee2ur")

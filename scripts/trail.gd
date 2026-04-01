@@ -5,6 +5,9 @@ class_name Trails
 var queue: Array
 @export var MAX_LENGTH: int
 
+func _ready() -> void:
+	queue.clear()
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_released():
 			queue.clear()
