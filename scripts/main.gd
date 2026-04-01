@@ -7,8 +7,6 @@ var live_touch_point = touch_point.instantiate()
 var touch_position = Vector2(0,0)
 
 
-@onready var timer = $BubbleSpawnTimer
-
 func _ready() -> void:
 	touch_position = Vector2(get_viewport().size.x / 2, get_viewport().size.y / 2)
 
@@ -29,5 +27,10 @@ func _on_bubble_spawn_timer_timeout() -> void:
 
 func spawn_bubble() -> void:
 	var new_bubble = bubble.instantiate()
-	new_bubble.position = Vector2(randf_range(100, get_viewport().size.x - 100), get_viewport().size.y - 100)
+	new_bubble.position = Vector2(
+		# Left to right with a 100px margin
+		randf_range(100, get_viewport().size.x - 100),
+		# 100px margin at the bottom, and all the way up to half way up the screen
+		randf_range(get_viewport().size.y - 100, get_viewport().size.y / 2)
+	)
 	add_child(new_bubble)

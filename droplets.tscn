@@ -2,6 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://2s5krq250ra6" path="res://assets/Droplet/droplet.svg" id="1_c4ja4"]
 
+[sub_resource type="Curve" id="Curve_6ovsq"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_pwclm"]
+curve = SubResource("Curve_6ovsq")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hqv47"]
 particle_flag_align_y = true
 particle_flag_disable_z = true
@@ -14,11 +21,11 @@ initial_velocity_max = 400.0
 gravity = Vector3(0, 0, 0)
 scale_min = 0.099999994
 scale_max = 0.19999999
+scale_curve = SubResource("CurveTexture_pwclm")
 
 [node name="Droplets" type="Node2D" unique_id=1311663594]
 
 [node name="Droplets" type="GPUParticles2D" parent="." unique_id=1574173926]
-emitting = false
 amount = 20
 texture = ExtResource("1_c4ja4")
 one_shot = true
