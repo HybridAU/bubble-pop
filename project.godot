@@ -13,14 +13,13 @@ config_version=5
 config/name="bubble-pop"
 run/main_scene="uid://bugmhdtt5yt32"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=1080
 window/size/viewport_height=1920
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
 window/handheld/orientation=1
 
 [input_devices]
