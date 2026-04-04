@@ -10,3 +10,6 @@ temp_assets/
 
 # Output from building .apk files
 builds/
+
+# Android signing keystore. It's password protected, but that's still no reason to publish it to GitHub
+tc.xo.bubblepop.keystore

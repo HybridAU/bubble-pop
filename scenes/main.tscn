@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bugmhdtt5yt32"]
 
-[ext_resource type="Script" uid="uid://btsxrtwf5j0r" path="res://scripts/main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://btsxrtwf5j0r" path="res://scripts/main.gd" id="1_o5qli"]
 
 [node name="Main" type="Node" unique_id=804394807]
-script = ExtResource("1_ig7tw")
+script = ExtResource("1_o5qli")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=102970302]
 anchors_preset = 15

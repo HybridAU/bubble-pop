@@ -1,6 +1,6 @@
 extends Area2D
 
-var droplets = preload("res://droplets.tscn")
+var droplets = preload("res://scenes/droplets.tscn")
 
 var vertical_speed = 60
 var horizontal_speed = 0
