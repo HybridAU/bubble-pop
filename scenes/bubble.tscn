@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://clrnn6vie8uxy"]
 
 [ext_resource type="Script" uid="uid://cewle1upkwa3x" path="res://scripts/bubble.gd" id="1_y2db8"]
-[ext_resource type="Script" uid="uid://qowkvfmmrdgm" path="res://scripts/bubble_sprite.gd" id="2_y2db8"]
 [ext_resource type="Texture2D" uid="uid://2s5krq250ra6" path="res://assets/Droplet/droplet.svg" id="3_lc0bl"]
 [ext_resource type="AudioStream" uid="uid://vbihkho7vv5k" path="res://assets/Pop/pop.mp3" id="4_a6s18"]
 
@@ -155,7 +154,6 @@ scale_curve = SubResource("CurveTexture_pwclm")
 script = ExtResource("1_y2db8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1948743448]
-script = ExtResource("2_y2db8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1705877029]
 shape = SubResource("CircleShape2D_n2mqj")
