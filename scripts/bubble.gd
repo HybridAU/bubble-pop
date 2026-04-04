@@ -2,12 +2,15 @@ extends Area2D
 
 @onready var pop_animation: AnimationPlayer = $PopAnimation
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var timer = $Timer
+
+signal popped
 
 
 var vertical_speed = 60
 var horizontal_speed = 0
 
-@onready var timer = $Timer
+
 
 func _ready() -> void:
 	# TODO this isn't too bad with 7 textures, but there must be a way to glob these.
@@ -37,4 +40,10 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
+	popped.emit()
 	pop_animation.play("pop_animation")
+
+
+func _on_visible_on_screen_enabler_2d_screen_exited() -> void:
+	# Clear up bubbles that drift off the screen
+	queue_free()

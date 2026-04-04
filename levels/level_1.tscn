@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bugmhdtt5yt32"]
 
-[ext_resource type="Script" uid="uid://btsxrtwf5j0r" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://btsxrtwf5j0r" path="res://scripts/main.gd" id="1_vn7o3"]
 
-[node name="Main" type="Node" unique_id=804394807]
-script = ExtResource("1_o5qli")
+[node name="Level1" type="Node" unique_id=804394807]
+script = ExtResource("1_vn7o3")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=102970302]
 anchors_preset = 15
@@ -16,5 +16,16 @@ color = Color(0.0013367112, 0.095184214, 0.2227821, 1)
 [node name="BubbleSpawnTimer" type="Timer" parent="." unique_id=68294711]
 wait_time = 0.5
 autostart = true
+
+[node name="Label" type="Label" parent="." unique_id=789697414]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -57.0
+offset_bottom = 88.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 64
+text = "Pop bubbles: 0/100 "
 
 [connection signal="timeout" from="BubbleSpawnTimer" to="." method="_on_bubble_spawn_timer_timeout"]

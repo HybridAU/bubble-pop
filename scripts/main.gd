@@ -6,6 +6,8 @@ var touch_point = preload("res://scenes/touch_point.tscn")
 var live_touch_point = touch_point.instantiate()
 var touch_position = Vector2(0,0)
 
+@onready var label: Label = $Label
+var score = 0
 
 func _ready() -> void:
 	touch_position = Vector2(get_viewport().size.x / 2, get_viewport().size.y / 2)
@@ -33,4 +35,11 @@ func spawn_bubble() -> void:
 		# 100px margin at the bottom, and all the way up to half way up the screen
 		randf_range(get_viewport().size.y - 100, get_viewport().size.y / 2)
 	)
+	new_bubble.popped.connect(add_point)
 	add_child(new_bubble)
+	
+func add_point():
+	score += 1
+	label.text = "Pop bubbles: {score}/100 ".format({"score": score})
+	if score >= 100:
+		print("TODO: Load level 2")
