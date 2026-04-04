@@ -1,6 +1,7 @@
 extends Area2D
 
-var droplets = preload("res://scenes/droplets.tscn")
+@onready var pop_animation: AnimationPlayer = $PopAnimation
+
 
 var vertical_speed = 60
 var horizontal_speed = 0
@@ -23,8 +24,4 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	var new_droplets = droplets.instantiate()
-	var root_node = get_parent()
-	new_droplets.position = position
-	root_node.add_child(new_droplets)
-	queue_free()
+	pop_animation.play("pop_animation")

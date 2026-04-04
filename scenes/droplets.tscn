@@ -26,6 +26,7 @@ scale_curve = SubResource("CurveTexture_pwclm")
 [node name="Droplets" type="Node2D" unique_id=1311663594]
 
 [node name="Droplets" type="GPUParticles2D" parent="." unique_id=1574173926]
+emitting = false
 amount = 20
 texture = ExtResource("1_c4ja4")
 one_shot = true

@@ -7,4 +7,5 @@ All code is MIT licenced, other content such as assets are under their own licen
 
 ## Asset Credits
  * [Bubbles by cassala](https://cassala.itch.io/bubble-sprites) CC-0
- * Droplet CC-0 made by following an [inkscape tutorial](https://www.youtube.com/watch?v=dGi1FO_hBmw)
+ * [Droplet made by follwing inkscape tutorial](https://www.youtube.com/watch?v=dGi1FO_hBmw) CC-0 - Michael Van Delft 
+ * [pop sound](https://starsoftware.itch.io/pop-sound) - License isn't clear, but was released for free.
