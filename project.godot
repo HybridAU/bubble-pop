@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="bubble-pop"
-run/main_scene="uid://bugmhdtt5yt32"
+run/main_scene="uid://dh5tl8iwqt6b1"
 config/features=PackedStringArray("4.6", "Mobile")
 
 [display]

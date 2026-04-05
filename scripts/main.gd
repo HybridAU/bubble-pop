@@ -6,7 +6,7 @@ var touch_point = preload("res://scenes/touch_point.tscn")
 var live_touch_point = touch_point.instantiate()
 var touch_position = Vector2(0,0)
 
-@onready var label: Label = $Label
+@onready var label: Label = $ScoreLabel
 var score = 0
 
 func _ready() -> void:
@@ -40,6 +40,6 @@ func spawn_bubble() -> void:
 	
 func add_point():
 	score += 1
-	label.text = "Pop bubbles: {score}/100 ".format({"score": score})
+	label.text = "{score}/100".format({"score": score})
 	if score >= 100:
 		print("TODO: Load level 2")
