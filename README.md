@@ -11,3 +11,4 @@ All code is MIT licenced, other content such as assets are under their own licen
  * [pop sound](https://starsoftware.itch.io/pop-sound) - License isn't clear, but was released for free.
  * [Font Bubblegum Sans](https://fonts.google.com/specimen/Bubblegum+Sans) -  SIL Open Font License
  * Background music [Bubble up](https://pixabay.com/music/pulses-bubble-up-169255/) - [Pixabay Content License](https://pixabay.com/service/license-summary/)
+ * Mute icon from [Giant Basic GUI Bundle](https://penzilla.itch.io/basic-gui-bundle)
