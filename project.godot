@@ -14,6 +14,14 @@ config/name="bubble-pop"
 run/main_scene="uid://dh5tl8iwqt6b1"
 config/features=PackedStringArray("4.6", "Mobile")
 
+[audio]
+
+buses/default_bus_layout="uid://3tw7pwudd3o4"
+
+[autoload]
+
+BackgroundMusic="*uid://crvtfinw1ecu0"
+
 [display]
 
 window/size/viewport_width=1080
