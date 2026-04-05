@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://btsxrtwf5j0r" path="res://scripts/main.gd" id="1_vn7o3"]
 [ext_resource type="FontFile" uid="uid://l3g7clglucve" path="res://assets/Fonts/BubblegumSans-Regular.ttf" id="2_jirdo"]
+[ext_resource type="PackedScene" uid="uid://bry4a26kufo0" path="res://menus/pause_menu.tscn" id="4_kx6l7"]
 
 [node name="Level1" type="Node" unique_id=804394807]
 script = ExtResource("1_vn7o3")
@@ -32,5 +33,7 @@ theme_override_colors/font_shadow_color = Color(0.84705883, 0.98039216, 0.960784
 theme_override_fonts/font = ExtResource("2_jirdo")
 theme_override_font_sizes/font_size = 128
 text = "0/100"
+
+[node name="PauseMenu" parent="." unique_id=731387759 instance=ExtResource("4_kx6l7")]
 
 [connection signal="timeout" from="BubbleSpawnTimer" to="." method="_on_bubble_spawn_timer_timeout"]
