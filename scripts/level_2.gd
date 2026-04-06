@@ -2,12 +2,14 @@ extends Node
 var bubble = preload("res://scenes/bubble.tscn")
 var bomb = preload("res://scenes/bomb.tscn")
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var label: Label = $ScoreLabel
+
 # Touch point
 var touch_point = preload("res://scenes/touch_point.tscn")
 var live_touch_point = touch_point.instantiate()
 var touch_position = Vector2(0,0)
 
-@onready var label: Label = $ScoreLabel
 var score = 0
 
 func _ready() -> void:
@@ -47,11 +49,13 @@ func spawn_bubble() -> void:
 	add_child(new_bubble)
 
 func reset_points():
+	animation_player.play("flash_red")
 	score = 0
 	label.text = "{score}/100".format({"score": score})
+	
 	
 func add_point():
 	score += 1
 	label.text = "{score}/100".format({"score": score})
 	if score >= 100:
-		print("TODO: Load level 2")
+		print("TODO: Build level 3")

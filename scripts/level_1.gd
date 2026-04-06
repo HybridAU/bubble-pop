@@ -41,5 +41,5 @@ func spawn_bubble() -> void:
 func add_point():
 	score += 1
 	label.text = "{score}/100".format({"score": score})
-	if score >= 5:
+	if score >= 100:
 		get_tree().change_scene_to_file("res://levels/level_2.tscn")
