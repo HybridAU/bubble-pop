@@ -1,28 +1,9 @@
 extends Node
 var bubble = preload("res://scenes/bubble.tscn")
 
-# Touch point
-var touch_point = preload("res://scenes/touch_point.tscn")
-var live_touch_point = touch_point.instantiate()
-var touch_position = Vector2(0,0)
-
-@onready var label: Label = $ScoreLabel
+@onready var label: Label = $"../ScoreLabel"
 var score = 0
 
-func _ready() -> void:
-	touch_position = Vector2(get_viewport().size.x / 2, get_viewport().size.y / 2)
-
-func _input(event: InputEvent) -> void:
-	touch_position=event.position
-	if event is InputEventMouseButton:
-		if event.is_pressed():
-			add_child(live_touch_point)
-		else:
-			remove_child(live_touch_point)
-
-
-func _physics_process(delta: float) -> void:
-	live_touch_point.global_position=touch_position
 
 func _on_bubble_spawn_timer_timeout() -> void:
 	spawn_bubble()
@@ -41,5 +22,5 @@ func spawn_bubble() -> void:
 func add_point():
 	score += 1
 	label.text = "{score}/100".format({"score": score})
-	if score >= 100:
+	if score >= 10:
 		get_tree().change_scene_to_file("res://levels/level_2.tscn")
