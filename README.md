@@ -21,5 +21,5 @@ All code is MIT licenced, other content such as assets are under their own licen
 
 # TODO list
  * Save settings (i.e. mute) and progress
-   * Once progress is saved, a level selector, go straight to level x
-   * Intro screen on each level
+   * https://www.youtube.com/watch?v=xG2GGniUa5o
+ * Intro screen on each level

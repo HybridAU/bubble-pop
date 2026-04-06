@@ -8,8 +8,8 @@ func resume():
 	pause_animation.play_backwards("blur")
 	canvas_layer.hide()
 	get_tree().paused = false
-	
-	
+
+
 func pause():
 	canvas_layer.show()
 	get_tree().paused = true
