@@ -28,6 +28,5 @@ func _on_main_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://menus/main_menu.tscn")
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	# This feels like a hack, I think I should be using a button here...
+func _on_texture_button_pressed() -> void:
 	pause()
