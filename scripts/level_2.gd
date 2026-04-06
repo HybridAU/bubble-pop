@@ -3,29 +3,9 @@ var bubble = preload("res://scenes/bubble.tscn")
 var bomb = preload("res://scenes/bomb.tscn")
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var label: Label = $ScoreLabel
-
-# Touch point
-var touch_point = preload("res://scenes/touch_point.tscn")
-var live_touch_point = touch_point.instantiate()
-var touch_position = Vector2(0,0)
+@onready var label: Label = $"../ScoreLabel"
 
 var score = 0
-
-func _ready() -> void:
-	touch_position = Vector2(get_viewport().size.x / 2, get_viewport().size.y / 2)
-
-func _input(event: InputEvent) -> void:
-	touch_position=event.position
-	if event is InputEventMouseButton:
-		if event.is_pressed():
-			add_child(live_touch_point)
-		else:
-			remove_child(live_touch_point)
-
-
-func _physics_process(delta: float) -> void:
-	live_touch_point.global_position=touch_position
 
 func _on_bubble_spawn_timer_timeout() -> void:
 	spawn_bubble()

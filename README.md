@@ -22,5 +22,4 @@ All code is MIT licenced, other content such as assets are under their own licen
 # TODO list
  * Save settings (i.e. mute) and progress
    * Once progress is saved, a level selector, go straight to level x
- * Refactor generic bits of levels
-   * Also, fix bug with character not being despawned.
+   * Intro screen on each level

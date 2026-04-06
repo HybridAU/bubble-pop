@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://btsxrtwf5j0r" path="res://scripts/level_1.gd" id="1_vn7o3"]
 [ext_resource type="PackedScene" uid="uid://duft2fty1nrbn" path="res://levels/base_level.tscn" id="2_jirdo"]
 
-[node name="root" type="Node" unique_id=173937783]
+[node name="Root" type="Node" unique_id=173937783]
 
 [node name="BaseLevel" parent="." unique_id=804394807 instance=ExtResource("2_jirdo")]
 
@@ -15,3 +15,5 @@ wait_time = 0.5
 autostart = true
 
 [connection signal="timeout" from="BaseLevel/Level1/BubbleSpawnTimer" to="BaseLevel/Level1" method="_on_bubble_spawn_timer_timeout"]
+
+[editable path="BaseLevel"]

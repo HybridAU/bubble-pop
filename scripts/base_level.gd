@@ -15,8 +15,9 @@ func _input(event: InputEvent) -> void:
 			live_touch_point = touch_point.instantiate()
 			add_child(live_touch_point)
 		else:
-			live_touch_point.queue_free()
-			remove_child(live_touch_point)
+			if live_touch_point:
+				live_touch_point.queue_free()
+				remove_child(live_touch_point)
 
 func _physics_process(delta: float) -> void:
 	if live_touch_point:
