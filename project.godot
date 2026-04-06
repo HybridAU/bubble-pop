@@ -21,6 +21,7 @@ buses/default_bus_layout="uid://3tw7pwudd3o4"
 [autoload]
 
 BackgroundMusic="*uid://crvtfinw1ecu0"
+Global="*uid://cg0ij2sggsck8"
 
 [display]
 

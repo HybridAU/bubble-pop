@@ -148,6 +148,10 @@ emitting = false
 amount = 50
 one_shot = true
 explosiveness = 1.0
+trail_enabled = true
+trail_lifetime = 0.01
+trail_sections = 5
+trail_section_subdivisions = 2
 process_material = SubResource("ParticleProcessMaterial_j15uc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1918332817]
