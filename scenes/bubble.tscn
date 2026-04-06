@@ -154,6 +154,7 @@ scale_curve = SubResource("CurveTexture_pwclm")
 script = ExtResource("1_y2db8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1948743448]
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1705877029]
 shape = SubResource("CircleShape2D_n2mqj")

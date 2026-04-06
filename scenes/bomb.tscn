@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://deexdnrp003hh"]
+
+[ext_resource type="Script" uid="uid://qjkg0koxh5fe" path="res://scripts/bomb.gd" id="1_j15uc"]
+[ext_resource type="PackedScene" uid="uid://clrnn6vie8uxy" path="res://scenes/bubble.tscn" id="2_j15uc"]
+[ext_resource type="Texture2D" uid="uid://c8l3ekakp1880" path="res://assets/bomb/bomb.svg" id="3_j15uc"]
+
+[node name="Bomb" type="Node2D" unique_id=49475747]
+script = ExtResource("1_j15uc")
+
+[node name="Bubble" parent="." unique_id=643527387 instance=ExtResource("2_j15uc")]
+
+[node name="BombSprite" type="Sprite2D" parent="Bubble" unique_id=1577441031]
+position = Vector2(-2, 1)
+scale = Vector2(0.5275875, 0.4963375)
+texture = ExtResource("3_j15uc")
