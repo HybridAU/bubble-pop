@@ -108,7 +108,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ltrgg")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_k7su4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ukfjw")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nsa3j")
-text = "Level 3"
+text = "Back"
 
 [node name="Title" type="Label" parent="." unique_id=1747873042]
 layout_mode = 1

@@ -21,6 +21,10 @@ func _on_toggle_sound_pressed() -> void:
 	if AudioServer.is_bus_mute(master_bus):
 		toggle_sound_label.text = "Sound on"
 		AudioServer.set_bus_mute(master_bus, false)
+		Global.mute = false
+		Global.save_settings()
 	else:
 		toggle_sound_label.text = "Mute"
 		AudioServer.set_bus_mute(master_bus, true)
+		Global.mute = true
+		Global.save_settings()
