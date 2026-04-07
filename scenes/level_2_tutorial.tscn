@@ -1,12 +1,13 @@
-[gd_scene format=3 uid="uid://cugoapnwlumte"]
+[gd_scene format=3 uid="uid://jps2ekh2dbpk"]
 
-[ext_resource type="Script" uid="uid://oirmhu3f8bxs" path="res://scripts/dismiss_tutorial.gd" id="1_lny61"]
-[ext_resource type="Texture2D" uid="uid://geyx560u4gjp" path="res://assets/Touch Icon/touch_icon.svg" id="2_nnies"]
-[ext_resource type="Texture2D" uid="uid://2s5krq250ra6" path="res://assets/Droplet/droplet.svg" id="3_nnies"]
-[ext_resource type="AudioStream" uid="uid://vbihkho7vv5k" path="res://assets/Pop/pop.mp3" id="4_l42xh"]
-[ext_resource type="Texture2D" uid="uid://eg7hpsrr3j26" path="res://assets/Bubbles/bubble_1.png" id="4_nnies"]
-[ext_resource type="PackedScene" uid="uid://dfpn72s4hn6ll" path="res://scenes/touch_point.tscn" id="5_l42xh"]
-[ext_resource type="FontFile" uid="uid://l3g7clglucve" path="res://assets/Fonts/BubblegumSans-Regular.ttf" id="6_lm3a4"]
+[ext_resource type="Script" uid="uid://oirmhu3f8bxs" path="res://scripts/dismiss_tutorial.gd" id="1_5dglr"]
+[ext_resource type="PackedScene" uid="uid://dfpn72s4hn6ll" path="res://scenes/touch_point.tscn" id="2_vaudp"]
+[ext_resource type="Texture2D" uid="uid://geyx560u4gjp" path="res://assets/Touch Icon/touch_icon.svg" id="3_x0cum"]
+[ext_resource type="Texture2D" uid="uid://eg7hpsrr3j26" path="res://assets/Bubbles/bubble_1.png" id="4_qphcr"]
+[ext_resource type="Texture2D" uid="uid://c8l3ekakp1880" path="res://assets/bomb/bomb.svg" id="4_vaudp"]
+[ext_resource type="Texture2D" uid="uid://2s5krq250ra6" path="res://assets/Droplet/droplet.svg" id="5_fr08b"]
+[ext_resource type="AudioStream" uid="uid://vbihkho7vv5k" path="res://assets/Pop/pop.mp3" id="6_mlb8o"]
+[ext_resource type="FontFile" uid="uid://l3g7clglucve" path="res://assets/Fonts/BubblegumSans-Regular.ttf" id="7_suyd3"]
 
 [sub_resource type="Animation" id="Animation_lm3a4"]
 length = 0.001
@@ -105,7 +106,7 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id="Animation_lny61"]
 resource_name = "tutorial"
-length = 3.0
+length = 4.0
 loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -114,9 +115,9 @@ tracks/0/path = NodePath(".:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(868, -0.25, 0, 0.25, 0, 231, -0.33333334, 106.16667, 0, 0),
-"times": PackedFloat32Array(0, 2)
+"handle_modes": PackedInt32Array(0, 2, 0, 2, 0),
+"points": PackedFloat32Array(868, -0.25, 0, 0.25, 0, 794, -0.10000001, 19.000002, 0.11666666, -22.166666, 621, -0.16666667, 35.38889, 0.33333334, -70.77778, 556, -0.10000001, 22.941177, 0.18333334, -42.058823, 231, -0.33333334, 106.16667, 0, 0),
+"times": PackedFloat32Array(0, 0.6, 1.3, 1.9, 3)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -125,9 +126,9 @@ tracks/1/path = NodePath(".:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(882, -0.25, 0, 0.25, 0, 1173, -0.33333334, -48.5, 0, 0),
-"times": PackedFloat32Array(0, 2)
+"handle_modes": PackedInt32Array(0, 2, 0, 2, 0),
+"points": PackedFloat32Array(882, -0.25, 0, 0.25, 0, 929, -0.10000001, 1.3076924, 0.11666666, -1.525641, 865, -0.16666667, -16.166668, 0.33333334, 32.333336, 1039, -0.10000001, -18.11765, 0.18333334, 33.215687, 1173, -0.33333334, -48.5, 0, 0),
+"times": PackedFloat32Array(0, 0.6, 1.3, 1.9, 3)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -136,9 +137,9 @@ tracks/2/path = NodePath("../TouchPoint:position:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(781, -0.25, 0, 0.25, 0, 153, -0.33333334, 104.66667, 0, 0),
-"times": PackedFloat32Array(0, 2)
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 0),
+"points": PackedFloat32Array(781, -0.25, 0, 0.25, 0, 707, -0.10000001, 18.615387, 0.11666666, -21.717949, 539, -0.099999994, 23.086956, 0.28333336, -65.41305, 472, -0.10000001, 22.705885, 0.18333334, -41.627453, 153, -0.33333334, 104.66667, 0, 0),
+"times": PackedFloat32Array(0, 0.6, 1.3, 1.9, 3)
 }
 tracks/3/type = "bezier"
 tracks/3/imported = false
@@ -147,9 +148,9 @@ tracks/3/path = NodePath("../TouchPoint:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(771, -0.25, 0, 0.25, 0, 1075, -0.33333334, -50.666668, 0, 0),
-"times": PackedFloat32Array(0, 2)
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 0),
+"points": PackedFloat32Array(771, -0.25, 0, 0.25, 0, 819, -0.10000001, 1.0000001, 0.11666666, -1.1666666, 758, -0.099999994, -10.086956, 0.28333336, 28.579714, 928, -0.10000001, -18.64706, 0.18333334, 34.186275, 1075, -0.33333334, -50.666668, 0, 0),
+"times": PackedFloat32Array(0, 0.6, 1.3, 1.9, 3)
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -158,7 +159,7 @@ tracks/4/path = NodePath("../Droplets:emitting")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.8),
+"times": PackedFloat32Array(2.2),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -170,7 +171,7 @@ tracks/5/path = NodePath("../PopSound:playing")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.8),
+"times": PackedFloat32Array(2.1333334),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -182,7 +183,7 @@ tracks/6/path = NodePath("../Bubble:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.8, 2),
+"times": PackedFloat32Array(2.2, 3.5666666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -194,7 +195,7 @@ tracks/7/path = NodePath("../TouchPoint:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.36666667, 2),
+"times": PackedFloat32Array(0, 0.36666667, 3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -256,7 +257,7 @@ shadow_offset = Vector2(0, 4)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hmq5i"]
 
-[node name="Level1Tutorial" type="Control" unique_id=157489895]
+[node name="Level2Tutorial" type="Control" unique_id=157489895]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -264,7 +265,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_lny61")
+script = ExtResource("1_5dglr")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=185207610]
 layout_mode = 1
@@ -279,38 +280,48 @@ offset_right = 490.0
 offset_bottom = 490.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.39607844, 0.39607844, 0.39607844, 0.627451)
+color = Color(0.39688927, 0.39688927, 0.39688924, 0.627451)
 
 [node name="TutorialPlayer" type="AnimationPlayer" parent="." unique_id=185800529]
 root_node = NodePath("../TouchHandIcon")
 libraries/ = SubResource("AnimationLibrary_73sww")
 autoplay = &"tutorial"
 
-[node name="TouchPoint" parent="." unique_id=126556268 instance=ExtResource("5_l42xh")]
+[node name="TouchPoint" parent="." unique_id=126556268 instance=ExtResource("2_vaudp")]
 position = Vector2(781, 771)
 
 [node name="TouchHandIcon" type="Sprite2D" parent="." unique_id=1321272105]
 position = Vector2(868, 882)
-texture = ExtResource("2_nnies")
+texture = ExtResource("3_x0cum")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2106125777]
+position = Vector2(595, 879.00006)
+scale = Vector2(0.4140625, 0.4140625)
+texture = ExtResource("4_vaudp")
+
+[node name="Bubble2" type="Sprite2D" parent="." unique_id=277551263]
+z_index = 1
+position = Vector2(595, 885)
+texture = ExtResource("4_qphcr")
 
 [node name="Bubble" type="Sprite2D" parent="." unique_id=2024433531]
 z_index = 1
-position = Vector2(511, 911)
-texture = ExtResource("4_nnies")
+position = Vector2(313, 1019)
+texture = ExtResource("4_qphcr")
 
 [node name="Droplets" type="GPUParticles2D" parent="." unique_id=434720136]
-position = Vector2(510, 916)
+position = Vector2(312, 1018)
 emitting = false
 amount = 20
-texture = ExtResource("3_nnies")
+texture = ExtResource("5_fr08b")
 one_shot = true
 explosiveness = 1.0
 randomness = 0.33
 process_material = SubResource("ParticleProcessMaterial_lny61")
 
 [node name="PopSound" type="AudioStreamPlayer2D" parent="." unique_id=399702491]
-position = Vector2(509, 916)
-stream = ExtResource("4_l42xh")
+position = Vector2(302, 1017)
+stream = ExtResource("6_mlb8o")
 bus = &"Sound Effects"
 
 [node name="Label" type="Label" parent="." unique_id=1116583981]
@@ -326,9 +337,9 @@ offset_right = 249.5
 offset_bottom = -347.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("6_lm3a4")
+theme_override_fonts/font = ExtResource("7_suyd3")
 theme_override_font_sizes/font_size = 128
-text = "Swipe to Pop"
+text = "Avoid the bombs"
 horizontal_alignment = 1
 
 [node name="OkButton" type="Button" parent="." unique_id=1350386973]
@@ -349,7 +360,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_lm3a4")
+theme_override_fonts/font = ExtResource("7_suyd3")
 theme_override_font_sizes/font_size = 82
 theme_override_styles/normal = SubResource("StyleBoxFlat_lny61")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_73sww")
