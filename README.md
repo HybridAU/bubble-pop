@@ -17,9 +17,8 @@ All code is MIT licenced, other content such as assets are under their own licen
 ### Assets I made myself
  * Droplet made by [follwing inkscape tutorial](https://www.youtube.com/watch?v=dGi1FO_hBmw) CC-0 
  * Bomb CC-0 
+ * Touch Icon (hand) CC-0
 
 
 # TODO list
- * Save settings (i.e. mute) and progress
-   * https://www.youtube.com/watch?v=xG2GGniUa5o
- * Intro screen on each level
+ * Tutorial for level 2
