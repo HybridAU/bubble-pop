@@ -44,11 +44,14 @@ _data = {
 
 [node name="BaseLevel" parent="." unique_id=783011445 instance=ExtResource("1_mi4ay")]
 
+[node name="ScoreLabel" parent="BaseLevel" index="1" unique_id=1211637556]
+text = "0/250"
+
 [node name="Level2" type="Node" parent="BaseLevel" unique_id=132102969]
 script = ExtResource("2_pqqg8")
 
 [node name="BubbleSpawnTimer" type="Timer" parent="BaseLevel/Level2" unique_id=68294711]
-wait_time = 0.5
+wait_time = 0.3
 autostart = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BaseLevel/Level2" unique_id=112641736]

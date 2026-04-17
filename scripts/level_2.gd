@@ -22,11 +22,10 @@ func spawn_bubble() -> void:
 	var new_bubble
 	if weighting == 10:
 		new_bubble = bomb.instantiate()
-		new_bubble.popped.connect(reset_points)
 	else:
 		new_bubble = bubble.instantiate()
-		new_bubble.popped.connect(add_point)
 
+	new_bubble.popped.connect(add_point)
 	new_bubble.position = Vector2(
 		# Left to right with a 100px margin
 		randf_range(100, get_viewport().size.x - 100),
@@ -35,16 +34,11 @@ func spawn_bubble() -> void:
 	)
 	add_child(new_bubble)
 
-func reset_points():
-	animation_player.play("flash_red")
-	score = 0
-	label.text = "{score}/100".format({"score": score})
-	
 	
 func add_point():
 	score += 1
-	label.text = "{score}/100".format({"score": score})
-	if score >= 100:
+	label.text = "{score}/250".format({"score": score})
+	if score >= 250:
 		Global.levels_unlocked = 3
 		Global.save_settings()
 		print("TODO: Build level 3")
