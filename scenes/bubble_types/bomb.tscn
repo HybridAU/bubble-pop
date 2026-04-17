@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://deexdnrp003hh"]
 
-[ext_resource type="Script" uid="uid://qjkg0koxh5fe" path="res://scripts/bomb.gd" id="1_j15uc"]
-[ext_resource type="AudioStream" uid="uid://bijq2aup7hhh6" path="res://assets/Pop/explosion.mp3" id="2_84slv"]
-[ext_resource type="PackedScene" uid="uid://clrnn6vie8uxy" path="res://scenes/bubble.tscn" id="2_j15uc"]
-[ext_resource type="Texture2D" uid="uid://c8l3ekakp1880" path="res://assets/bomb/bomb.svg" id="3_j15uc"]
+[ext_resource type="Script" uid="uid://qjkg0koxh5fe" path="res://scripts/bomb.gd" id="1_jad2j"]
+[ext_resource type="AudioStream" uid="uid://bijq2aup7hhh6" path="res://assets/Pop/explosion.mp3" id="2_dswcg"]
+[ext_resource type="PackedScene" uid="uid://clrnn6vie8uxy" path="res://scenes/bubble.tscn" id="3_r2j5m"]
+[ext_resource type="Texture2D" uid="uid://c8l3ekakp1880" path="res://assets/bomb/bomb.svg" id="4_cr488"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_84slv"]
+radius = 240.0
 
 [sub_resource type="Gradient" id="Gradient_j15uc"]
 offsets = PackedFloat32Array(0.23739496, 0.8277311, 1)
@@ -30,9 +33,6 @@ scale_min = 10.0
 scale_max = 20.0
 scale_curve = SubResource("CurveTexture_1hf1o")
 color_ramp = SubResource("GradientTexture1D_84slv")
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_84slv"]
-radius = 240.00000
 
 [sub_resource type="Animation" id="Animation_84slv"]
 length = 0.001
@@ -75,7 +75,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/3/path = NodePath("Bubble/Area2D/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -140,7 +140,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/4/path = NodePath("Bubble/Area2D/CollisionShape2D:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -157,18 +157,24 @@ _data = {
 }
 
 [node name="Bomb" type="Node2D" unique_id=49475747]
-script = ExtResource("1_j15uc")
+script = ExtResource("1_jad2j")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=444731808]
-stream = ExtResource("2_84slv")
+stream = ExtResource("2_dswcg")
 bus = &"Sound Effects"
 
-[node name="Bubble" parent="." unique_id=643527387 instance=ExtResource("2_j15uc")]
+[node name="Bubble" parent="." unique_id=643527387 instance=ExtResource("3_r2j5m")]
+
+[node name="Area2D" type="CharacterBody2D" parent="Bubble" unique_id=1833293084]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bubble/Area2D" unique_id=1627552270]
+shape = SubResource("CircleShape2D_84slv")
+disabled = true
 
 [node name="BombSprite" type="Sprite2D" parent="Bubble" unique_id=1577441031]
 position = Vector2(-2, 1)
 scale = Vector2(0.5275875, 0.4963375)
-texture = ExtResource("3_j15uc")
+texture = ExtResource("4_cr488")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Bubble" unique_id=2133148288]
 emitting = false
@@ -180,13 +186,6 @@ trail_lifetime = 0.01
 trail_sections = 5
 trail_section_subdivisions = 2
 process_material = SubResource("ParticleProcessMaterial_j15uc")
-
-[node name="Area2D" type="CharacterBody2D" parent="." unique_id=1833293084]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1627552270]
-position = Vector2(3, -170)
-shape = SubResource("CircleShape2D_84slv")
-disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1918332817]
 libraries/ = SubResource("AnimationLibrary_1hf1o")

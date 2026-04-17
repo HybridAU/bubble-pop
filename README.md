@@ -18,3 +18,4 @@ All code is MIT licenced, other content such as assets are under their own licen
  * Droplet made by [follwing inkscape tutorial](https://www.youtube.com/watch?v=dGi1FO_hBmw) CC-0 
  * Bomb CC-0 
  * Touch Icon (hand) CC-0
+ * Snowflake icon CC-0

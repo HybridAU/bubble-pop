@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ba3rrqs1qhss4"]
+
+[ext_resource type="Script" uid="uid://bfmgwlt75gt2p" path="res://scripts/snowflake.gd" id="1_73k7w"]
+[ext_resource type="PackedScene" uid="uid://clrnn6vie8uxy" path="res://scenes/bubble.tscn" id="1_sdybk"]
+[ext_resource type="Texture2D" uid="uid://dkxoscekf1saj" path="res://assets/snowflake/snowflake.svg" id="2_73k7w"]
+
+[sub_resource type="Animation" id="Animation_m2fif"]
+resource_name = "freeze"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ue7w"]
+_data = {
+&"freeze": SubResource("Animation_m2fif")
+}
+
+[node name="Snowflake" type="Node2D" unique_id=492626901]
+script = ExtResource("1_73k7w")
+
+[node name="Bubble" parent="." unique_id=643527387 instance=ExtResource("1_sdybk")]
+
+[node name="Snowflake" type="Sprite2D" parent="Bubble" unique_id=1822738085]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_73k7w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=43173238]
+libraries/ = SubResource("AnimationLibrary_3ue7w")
