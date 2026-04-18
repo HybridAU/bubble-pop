@@ -40,9 +40,18 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	popped.emit()
-	pop_animation.play("pop_animation")
+	if body.name == "FreezeBody":
+		freeze_bubble()
+	else:
+		popped.emit()
+		pop_animation.play("pop_animation")
 
+func freeze_bubble():
+	vertical_speed = 0
+	horizontal_speed = 0
+	timer.stop()
+	timer.wait_time = 3
+	timer.start()
 
 func _on_visible_on_screen_enabler_2d_screen_exited() -> void:
 	# Clear up bubbles that drift off the screen

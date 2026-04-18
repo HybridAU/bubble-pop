@@ -13,6 +13,7 @@ All code is MIT licenced, other content such as assets are under their own licen
  * [Explosion sound](https://pixabay.com/sound-effects/film-special-effects-explosion-9-340460/) - [Pixabay Content License](https://pixabay.com/service/license-summary/)
  * Background music [Bubble up](https://pixabay.com/music/pulses-bubble-up-169255/) - [Pixabay Content License](https://pixabay.com/service/license-summary/)
  * Mute and pause icon from [Giant Basic GUI Bundle](https://penzilla.itch.io/basic-gui-bundle)
+ * Freeze sound is "forst_nova_short_05" from the [Free Frost Mage SFX](https://danielsoundsgood.itch.io/free-frost-mage-sfx) pack.
 
 ### Assets I made myself
  * Droplet made by [follwing inkscape tutorial](https://www.youtube.com/watch?v=dGi1FO_hBmw) CC-0 

@@ -9,5 +9,6 @@ func _ready() -> void:
 	bubble.popped.connect(freeze)
 
 func freeze():
+	bubble.freeze_bubble()
 	animation_player.play("freeze")
 	popped.emit()
