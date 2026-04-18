@@ -41,4 +41,4 @@ func add_point():
 	if score >= 250:
 		Global.levels_unlocked = 3
 		Global.save_settings()
-		print("TODO: Build level 3")
+		get_tree().change_scene_to_file("res://levels/level_3.tscn")

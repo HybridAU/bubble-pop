@@ -2,7 +2,7 @@ extends Node
 var bubble = preload("res://scenes/bubble.tscn")
 var bomb = preload("res://scenes/bubble_types/bomb.tscn")
 var snowflake = preload("res://scenes/bubble_types/snowflake.tscn")
-var level_2_tutorial = preload("res://scenes/level_2_tutorial.tscn")
+var level_3_tutorial = preload("res://scenes/level_3_tutorial.tscn")
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var label: Label = $"../ScoreLabel"
@@ -12,8 +12,7 @@ var score = 0
 func _ready() -> void:
 	# If we haven't already passed level 3, show the tutorial
 	if Global.levels_unlocked < 4:
-		# TODO level 3 tutorial
-		var tutorial = level_2_tutorial.instantiate()
+		var tutorial = level_3_tutorial.instantiate()
 		add_child(tutorial)
 
 func _on_bubble_spawn_timer_timeout() -> void:
@@ -42,7 +41,7 @@ func spawn_bubble() -> void:
 func add_point():
 	score += 1
 	label.text = "{score}/500".format({"score": score})
+	# TODO build a level 4, and then change this to >=
 	if score == 500:
 		Global.levels_unlocked = 4
 		Global.save_settings()
-		print("TODO: Build level 3")
