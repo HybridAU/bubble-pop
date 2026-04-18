@@ -75,7 +75,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Bubble/Area2D/CollisionShape2D:disabled")
+tracks/3/path = NodePath("Bubble/ExplosionArea2D/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -140,7 +140,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Bubble/Area2D/CollisionShape2D:disabled")
+tracks/4/path = NodePath("Bubble/ExplosionArea2D/CollisionShape2D:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -165,9 +165,9 @@ bus = &"Sound Effects"
 
 [node name="Bubble" parent="." unique_id=643527387 instance=ExtResource("3_r2j5m")]
 
-[node name="Area2D" type="CharacterBody2D" parent="Bubble" unique_id=1833293084]
+[node name="ExplosionArea2D" type="StaticBody2D" parent="Bubble" unique_id=506167486]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bubble/Area2D" unique_id=1627552270]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bubble/ExplosionArea2D" unique_id=1627552270]
 shape = SubResource("CircleShape2D_84slv")
 disabled = true
 
