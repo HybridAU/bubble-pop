@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="108"
+   height="108"
+   viewBox="0 0 108 108"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="store_icon.png"
+   inkscape:export-xdpi="455.11111"
+   inkscape:export-ydpi="455.11111"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="store_icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.552525"
+     inkscape:cx="9.3396242"
+     inkscape:cy="169.0794"
+     inkscape:window-width="2560"
+     inkscape:window-height="1368"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4297-9"
+       id="radialGradient4453-8"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.51402396,0.89031562,-0.82631936,0.47707452,662.17406,135.94567)"
+       cx="177.87421"
+       cy="657.23578"
+       fx="177.87421"
+       fy="657.23578"
+       r="140.5" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4297-9">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0"
+         id="stop4299-0" />
+      <stop
+         id="stop4301-0"
+         offset="0.20294678"
+         style="stop-color:#63fffb;stop-opacity:0.44313725;" />
+      <stop
+         style="stop-color:#63fffb;stop-opacity:0.20392157;"
+         offset="0.4164919"
+         id="stop4303-07" />
+      <stop
+         style="stop-color:#63fffb;stop-opacity:0;"
+         offset="1"
+         id="stop4305-2" />
+    </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4057-5">
+      <circle
+         id="path4059-5"
+         style="fill:none;stroke:#00b7ff;stroke-width:43.2984;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="273.5"
+         cy="681.86218"
+         r="140.5" />
+    </clipPath>
+    <filter
+       inkscape:collect="always"
+       id="filter3984-2"
+       style="color-interpolation-filters:sRGB"
+       x="-0.11978876"
+       y="-0.11978876"
+       width="1.2395775"
+       height="1.2395775">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.9410377"
+         id="feGaussianBlur3986-1" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter4174"
+       x="-0.034749878"
+       y="-0.034749878"
+       width="1.0694998"
+       height="1.0694998">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.57334374"
+         id="feGaussianBlur4176" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#001839;fill-opacity:1;stroke-width:7.30622;stroke-linecap:round"
+       id="path1"
+       cx="54"
+       cy="54"
+       r="40" />
+    <g
+       id="g3684"
+       transform="matrix(0.65999999,0,0,0.65999999,-299.589,127.18472)"
+       inkscape:export-xdpi="384"
+       inkscape:export-ydpi="384">
+      <circle
+         style="fill:url(#radialGradient4453-8);fill-opacity:1;stroke:#00b7ff;stroke-width:19.6043;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter3984-2)"
+         id="path3127"
+         transform="matrix(0.35587189,0,0,0.35587189,438.40995,-353.54152)"
+         clip-path="url(#clipPath4057-5)"
+         cx="273.5"
+         cy="681.86218"
+         r="140.5" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter4174)"
+         id="path3129"
+         transform="matrix(0.13983704,0.18946257,-0.279208,0.20607564,579.61192,-154.48223)"
+         cx="-110.30865"
+         cy="184.03505"
+         r="19.79899" />
+    </g>
+  </g>
+</svg>
