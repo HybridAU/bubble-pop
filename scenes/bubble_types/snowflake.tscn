@@ -38,7 +38,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Bubble/FreezeBody/CollisionShape2D:disabled")
+tracks/2/path = NodePath("Bubble/FreezeBody/FreezeArea:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -78,7 +78,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Bubble/FreezeBody/CollisionShape2D:disabled")
+tracks/2/path = NodePath("Bubble/FreezeBody/FreezeArea:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -94,7 +94,7 @@ _data = {
 &"freeze": SubResource("Animation_m2fif")
 }
 
-[node name="Snowflake" type="Node2D" unique_id=492626901]
+[node name="Snowflake" type="Node2D" unique_id=2022453852]
 script = ExtResource("1_73k7w")
 
 [node name="Bubble" parent="." unique_id=643527387 instance=ExtResource("1_sdybk")]
@@ -103,9 +103,9 @@ script = ExtResource("1_73k7w")
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_73k7w")
 
-[node name="FreezeBody" type="StaticBody2D" parent="Bubble" unique_id=1042342167]
+[node name="FreezeBody" type="Area2D" parent="Bubble" unique_id=1074749805]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bubble/FreezeBody" unique_id=1754601024]
+[node name="FreezeArea" type="CollisionShape2D" parent="Bubble/FreezeBody" unique_id=1754601024]
 shape = SubResource("CircleShape2D_7afe4")
 disabled = true
 
@@ -120,3 +120,5 @@ libraries/ = SubResource("AnimationLibrary_3ue7w")
 [node name="FreezeSound" type="AudioStreamPlayer2D" parent="." unique_id=707238993]
 stream = ExtResource("4_m2fif")
 bus = &"Sound Effects"
+
+[connection signal="area_entered" from="Bubble/FreezeBody" to="." method="_on_freeze_body_area_entered"]
