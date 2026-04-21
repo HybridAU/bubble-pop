@@ -110,6 +110,21 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ukfjw")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nsa3j")
 text = "❄️ Level 3"
 
+[node name="Level4" type="Button" parent="VBoxContainer" unique_id=1261953916]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_6w5ym")
+theme_override_font_sizes/font_size = 82
+theme_override_styles/normal = SubResource("StyleBoxFlat_ltrgg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k7su4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ukfjw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nsa3j")
+text = "🌀 Level 4"
+
 [node name="Back" type="Button" parent="VBoxContainer" unique_id=1033376490]
 layout_mode = 2
 size_flags_vertical = 3
@@ -148,4 +163,5 @@ horizontal_alignment = 1
 [connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

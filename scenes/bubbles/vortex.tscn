@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://brb7vot737xvq"]
+
+[ext_resource type="Script" uid="uid://drfeel3n76a2v" path="res://scenes/bubbles/vortex.gd" id="1_ovirk"]
+[ext_resource type="PackedScene" uid="uid://clrnn6vie8uxy" path="res://scenes/bubbles/bubble.tscn" id="2_onuit"]
+[ext_resource type="Texture2D" uid="uid://c54gmyqd3nxfy" path="res://assets/vortex/vortex.svg" id="3_onuit"]
+[ext_resource type="Texture2D" uid="uid://2x85bufkoxtn" path="res://assets/vortex/vortex_area.svg" id="4_x5sb4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onuit"]
+radius = 128.0039
+
+[sub_resource type="Animation" id="Animation_05b12"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble/VortexArea/Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bubble/VortexSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_x5sb4"]
+resource_name = "vortex"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble/VortexArea/Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bubble/VortexSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_05b12"]
+_data = {
+&"RESET": SubResource("Animation_05b12"),
+&"vortex": SubResource("Animation_x5sb4")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1391287677]
+script = ExtResource("1_ovirk")
+
+[node name="Bubble" parent="." unique_id=643527387 instance=ExtResource("2_onuit")]
+
+[node name="VortexSprite" type="Sprite2D" parent="Bubble" unique_id=24167742]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_onuit")
+
+[node name="VortexArea" type="Area2D" parent="Bubble" unique_id=349741066]
+
+[node name="VortexCollisionShape" type="CollisionShape2D" parent="Bubble/VortexArea" unique_id=117578841]
+shape = SubResource("CircleShape2D_onuit")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bubble/VortexArea" unique_id=626201742]
+visible = false
+texture = ExtResource("4_x5sb4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1671772813]
+libraries/ = SubResource("AnimationLibrary_05b12")

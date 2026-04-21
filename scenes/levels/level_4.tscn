@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bjtimpjbdo0pf"]
+
+[ext_resource type="PackedScene" uid="uid://duft2fty1nrbn" path="res://scenes/levels/base_level.tscn" id="1_vmkp1"]
+[ext_resource type="Script" uid="uid://d2dsv0irkohlt" path="res://scenes/levels/level_4.gd" id="2_vmkp1"]
+
+[node name="Root" type="Node" unique_id=804394807]
+
+[node name="BaseLevel" parent="." unique_id=783011445 instance=ExtResource("1_vmkp1")]
+
+[node name="ScoreLabel" parent="BaseLevel" index="1" unique_id=1211637556]
+text = "0/500"
+
+[node name="Level4" type="Node" parent="BaseLevel" unique_id=132102969]
+script = ExtResource("2_vmkp1")
+
+[node name="BubbleSpawnTimer" type="Timer" parent="BaseLevel/Level4" unique_id=68294711]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="BaseLevel/Level4/BubbleSpawnTimer" to="BaseLevel/Level4" method="_on_bubble_spawn_timer_timeout"]
+
+[editable path="BaseLevel"]

@@ -4,7 +4,6 @@ var bomb = preload("res://scenes/bubbles/bomb.tscn")
 var freeze = preload("res://scenes/bubbles/freeze.tscn")
 var level_3_tutorial = preload("res://scenes/tutorials/level_3_tutorial.tscn")
 
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var label: Label = $"../ScoreLabel"
 
 var score = 0

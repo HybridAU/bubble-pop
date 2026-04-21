@@ -26,3 +26,4 @@ All code is MIT licenced, other content such as assets are under their own licen
  * Bomb CC-0 
  * Touch Icon (hand) CC-0
  * Snowflake icon CC-0
+ * Vortex icon CC-0

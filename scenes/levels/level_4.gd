@@ -1,16 +1,19 @@
 extends Node
 var bubble = preload("res://scenes/bubbles/bubble.tscn")
 var bomb = preload("res://scenes/bubbles/bomb.tscn")
-var level_2_tutorial = preload("res://scenes/tutorials/level_2_tutorial.tscn")
+var freeze = preload("res://scenes/bubbles/freeze.tscn")
+var vortex = preload("res://scenes/bubbles/vortex.tscn")
+
+var level_3_tutorial = preload("res://scenes/tutorials/level_3_tutorial.tscn")
 
 @onready var label: Label = $"../ScoreLabel"
 
 var score = 0
 
 func _ready() -> void:
-	# If we haven't already passed level 2, show the tutorial
-	if Global.levels_unlocked < 3:
-		var tutorial = level_2_tutorial.instantiate()
+	if Global.levels_unlocked < 5:
+		# TODO level 4 tutorial
+		var tutorial = level_3_tutorial.instantiate()
 		add_child(tutorial)
 
 func _on_bubble_spawn_timer_timeout() -> void:
@@ -21,6 +24,10 @@ func spawn_bubble() -> void:
 	var new_bubble
 	if weighting == 10:
 		new_bubble = bomb.instantiate()
+	elif weighting == 9:
+		new_bubble = freeze.instantiate()
+	elif weighting == 8:
+		new_bubble = vortex.instantiate()
 	else:
 		new_bubble = bubble.instantiate()
 
@@ -36,8 +43,8 @@ func spawn_bubble() -> void:
 	
 func add_point():
 	score += 1
-	label.text = "{score}/250".format({"score": score})
-	if score >= 250:
-		Global.levels_unlocked = 3
+	label.text = "{score}/500".format({"score": score})
+	# TODO build a level 5, and then change this to >=
+	if score == 500:
+		Global.levels_unlocked = 4
 		Global.save_settings()
-		get_tree().change_scene_to_file("res://scenes/levels/level_3.tscn")

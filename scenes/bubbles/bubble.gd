@@ -1,3 +1,5 @@
+class_name Bubble
+
 extends Area2D
 
 @onready var pop_animation: AnimationPlayer = $PopAnimation
