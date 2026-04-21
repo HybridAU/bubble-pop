@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://o0qg52jfbrvr"]
+[gd_scene format=3 uid="uid://sqaurfn73vym"]
 
-[ext_resource type="Texture2D" uid="uid://2s5krq250ra6" path="res://assets/Droplet/droplet.svg" id="1_c4ja4"]
+[ext_resource type="Texture2D" uid="uid://2s5krq250ra6" path="res://assets/pop/droplet.svg" id="1_qfmif"]
 
 [sub_resource type="Curve" id="Curve_6ovsq"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -28,7 +28,7 @@ scale_curve = SubResource("CurveTexture_pwclm")
 [node name="Droplets" type="GPUParticles2D" parent="." unique_id=1574173926]
 emitting = false
 amount = 20
-texture = ExtResource("1_c4ja4")
+texture = ExtResource("1_qfmif")
 one_shot = true
 explosiveness = 1.0
 randomness = 0.33

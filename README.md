@@ -2,6 +2,12 @@
 
 Simple bubble pop game made with [godot](https://godotengine.org/)
 
+## Screenshots
+![Scren full of bubbles](./play_store_assets/screenshot_1.png)
+![Bubbles Popping](./play_store_assets/screenshot_2.png)
+![First level](./play_store_assets/screenshot_3.png)
+![Main menu](./play_store_assets/screenshot_4.png)
+
 ## License
 All code is MIT licenced, other content such as assets are under their own license
 

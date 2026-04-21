@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://duft2fty1nrbn"]
+
+[ext_resource type="Script" uid="uid://b51qlovt6f0dm" path="res://scenes/levels/base_level.gd" id="1_63c5o"]
+[ext_resource type="FontFile" uid="uid://l3g7clglucve" path="res://assets/Fonts/BubblegumSans-Regular.ttf" id="2_satuh"]
+[ext_resource type="PackedScene" uid="uid://bry4a26kufo0" path="res://scenes/menus/pause_menu.tscn" id="3_p5284"]
+
+[node name="BaseLevel" type="Node" unique_id=804394807]
+script = ExtResource("1_63c5o")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=102970302]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0013367112, 0.095184214, 0.2227821, 1)
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1211637556]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -480.0
+offset_top = 100.0
+offset_right = -124.0
+offset_bottom = 250.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.25309506, 0.80966485, 0.9999997, 1)
+theme_override_colors/font_shadow_color = Color(0.84705883, 0.98039216, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("2_satuh")
+theme_override_font_sizes/font_size = 128
+text = "0/100"
+
+[node name="PauseMenu" parent="." unique_id=731387759 instance=ExtResource("3_p5284")]

@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b3m54he7capgh"]
+
+[ext_resource type="PackedScene" uid="uid://duft2fty1nrbn" path="res://scenes/levels/base_level.tscn" id="1_mi4ay"]
+[ext_resource type="Script" uid="uid://b7hyfu6oeas1g" path="res://scenes/levels/level_2.gd" id="2_pqqg8"]
+
+[sub_resource type="Animation" id="Animation_0srwa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BaseLevel/ScoreLabel:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.25309506, 0.80966485, 0.9999997, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_v5uil"]
+resource_name = "flash_red"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BaseLevel/ScoreLabel:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.25309506, 0.80966485, 0.9999997, 1), Color(1, 0, 0, 1), Color(0.25309506, 0.80966485, 0.9999997, 1), Color(1, 0, 0, 1), Color(0.25309506, 0.80966485, 0.9999997, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5722l"]
+_data = {
+&"RESET": SubResource("Animation_0srwa"),
+&"flash_red": SubResource("Animation_v5uil")
+}
+
+[node name="Root" type="Node" unique_id=804394807]
+
+[node name="BaseLevel" parent="." unique_id=783011445 instance=ExtResource("1_mi4ay")]
+
+[node name="ScoreLabel" parent="BaseLevel" index="1" unique_id=1211637556]
+text = "0/250"
+
+[node name="Level2" type="Node" parent="BaseLevel" unique_id=132102969]
+script = ExtResource("2_pqqg8")
+
+[node name="BubbleSpawnTimer" type="Timer" parent="BaseLevel/Level2" unique_id=68294711]
+wait_time = 0.3
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BaseLevel/Level2" unique_id=112641736]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_5722l")
+
+[connection signal="timeout" from="BaseLevel/Level2/BubbleSpawnTimer" to="BaseLevel/Level2" method="_on_bubble_spawn_timer_timeout"]
+
+[editable path="BaseLevel"]

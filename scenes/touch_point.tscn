@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dfpn72s4hn6ll"]
 
 [ext_resource type="Texture2D" uid="uid://cb2w7d2kamdlt" path="res://assets/Touch Icon/touch.svg" id="1_nq6iu"]
-[ext_resource type="Script" uid="uid://bnk8a3dnmek3n" path="res://scripts/trail.gd" id="2_nq6iu"]
+[ext_resource type="Script" uid="uid://bnk8a3dnmek3n" path="res://scenes/touch_point.gd" id="2_nq6iu"]
 
 [sub_resource type="Curve" id="Curve_nq6iu"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
