@@ -9,9 +9,11 @@
    id="svg1"
    inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
    sodipodi:docname="vortex_area.svg"
+   inkscape:export-filename="vortex_area.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -24,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.5"
-     inkscape:cx="151"
-     inkscape:cy="337"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="87.858018"
+     inkscape:cy="123.56691"
      inkscape:window-width="2560"
      inkscape:window-height="1368"
      inkscape:window-x="0"
@@ -35,38 +37,31 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
-    <linearGradient
-       id="linearGradient2"
-       inkscape:collect="always">
-      <stop
-         style="stop-color:#effaff;stop-opacity:1;"
-         offset="0"
-         id="stop2" />
-      <stop
-         style="stop-color:#001839;stop-opacity:0.59233302;"
-         offset="1"
-         id="stop3" />
-    </linearGradient>
-    <radialGradient
+    <filter
        inkscape:collect="always"
-       xlink:href="#linearGradient2"
-       id="radialGradient3"
-       cx="128"
-       cy="128"
-       fx="128"
-       fy="128"
-       r="128"
-       gradientUnits="userSpaceOnUse" />
+       style="color-interpolation-filters:sRGB"
+       id="filter5"
+       x="-0.063590867"
+       y="-0.066724681"
+       width="1.1271817"
+       height="1.1334494">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.6194458"
+         id="feGaussianBlur5" />
+    </filter>
   </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <circle
-       style="fill:url(#radialGradient3);stroke:none;stroke-width:17.1727;stroke-linecap:round"
-       id="path1"
-       cx="128"
-       cy="128"
-       r="128" />
+    <path
+       id="path5"
+       style="opacity:0.684502;fill:#faffff;fill-opacity:1;stroke-width:19.9999;stroke-linecap:round;stroke-dasharray:none;filter:url(#filter5)"
+       inkscape:transform-center-x="-2.4702302"
+       inkscape:transform-center-y="3.5946841"
+       transform="matrix(1.6625989,0,0,1.6625989,10.786785,-35.766001)"
+       d="m 80.625,112.25 c -9.643224,18.74779 3.413019,34.58539 11.396856,51.0733 C 82.581456,148.07258 60.698299,136.41642 70.60925,115.57531 51.843723,127.86263 52.618785,146.29128 49.80937,163.59338 50.824241,145.90591 38.032972,124.90496 60.55177,112.37843 29.965432,113.82159 26.459766,128.18961 15.500001,139 21.649382,122.77215 28.430241,106.96528 54.294176,103.88046 32.941424,89.042839 19.961479,89.618386 2.1987628,98.937001 16.307256,86.79618 34.586065,73.36478 54.226656,93.327342 49.235293,68.409684 32.153203,63.488229 14.986275,58.707082 33.362444,59.947942 53.083619,58.1065 60.375,84.75 66.297465,66.614549 65.852035,49.366106 48.978144,33.676704 65.062491,43.651785 82.437996,45.524548 70.39075,81.424691 88.984317,73.192183 91.009718,53.914232 91.19063,33.406622 94.933009,52.919331 99.124024,72.581585 80.44823,84.621569 105.25308,83.755747 116.29624,71.630352 125.5,57.999998 c -4.10616,19.174018 -16.0011,31.757531 -38.794176,35.119539 10.16598,12.146593 30.605156,9.311443 52.095416,4.943462 -17.80641,7.126091 -35.62428,14.381961 -52.027896,5.609661 6.115837,16.6876 22.291066,25.94 39.240376,34.62026 C 107.4221,135.2897 87.64447,134.23154 80.625,112.25 Z"
+       sodipodi:nodetypes="ccccccccccccccccccccc" />
   </g>
 </svg>

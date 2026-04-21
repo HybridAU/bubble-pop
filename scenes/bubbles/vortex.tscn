@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://drfeel3n76a2v" path="res://scenes/bubbles/vortex.gd" id="1_ovirk"]
 [ext_resource type="PackedScene" uid="uid://clrnn6vie8uxy" path="res://scenes/bubbles/bubble.tscn" id="2_onuit"]
 [ext_resource type="Texture2D" uid="uid://c54gmyqd3nxfy" path="res://assets/vortex/vortex.svg" id="3_onuit"]
-[ext_resource type="Texture2D" uid="uid://2x85bufkoxtn" path="res://assets/vortex/vortex_area.svg" id="4_x5sb4"]
+[ext_resource type="Texture2D" uid="uid://bd2lk05sinyln" path="res://assets/vortex/vortex_area.png" id="4_x5sb4"]
+[ext_resource type="AudioStream" uid="uid://b5jqqx3atovnc" path="res://assets/vortex/vortex.mp3" id="5_05b12"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onuit"]
 radius = 128.0039
@@ -34,6 +35,29 @@ tracks/1/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bubble/VortexArea/Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_x5sb4"]
 resource_name = "vortex"
@@ -45,10 +69,10 @@ tracks/0/path = NodePath("Bubble/VortexArea/Sprite2D:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 3.8333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -61,6 +85,29 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bubble/VortexArea/Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 6.2831855, -0.33333334, -1.0471976, 0, 0),
+"times": PackedFloat32Array(0, 4)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_05b12"]
@@ -89,3 +136,7 @@ texture = ExtResource("4_x5sb4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1671772813]
 libraries/ = SubResource("AnimationLibrary_05b12")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2014156728]
+stream = ExtResource("5_05b12")
+bus = &"Sound Effects"

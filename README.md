@@ -20,6 +20,7 @@ All code is MIT licenced, other content such as assets are under their own licen
  * Background music [Bubble up](https://pixabay.com/music/pulses-bubble-up-169255/) - [Pixabay Content License](https://pixabay.com/service/license-summary/)
  * Mute and pause icon from [Giant Basic GUI Bundle](https://penzilla.itch.io/basic-gui-bundle)
  * Freeze sound is "forst_nova_short_05" from the [Free Frost Mage SFX](https://danielsoundsgood.itch.io/free-frost-mage-sfx) pack.
+ * Vortex sound is "Impact_1_Low" from the [Free SCI-FI UI Sound Effects](https://hoveaudio.itch.io/free-sci-fi-ui-sound-effects-pack) pack.
 
 ### Assets I made myself
  * Droplet made by [follwing inkscape tutorial](https://www.youtube.com/watch?v=dGi1FO_hBmw) CC-0 
