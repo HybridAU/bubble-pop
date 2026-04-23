@@ -1,6 +1,6 @@
 extends Node
 var bubble = preload("res://scenes/bubbles/bubble.tscn")
-var level_1_tutorial = preload("res://scenes/tutorials/level_1_tutorial.tscn")
+var tutorial = preload("res://scenes/tutorials/level_1_tutorial.tscn")
 
 @onready var label: Label = $"../ScoreLabel"
 var score = 0
@@ -8,7 +8,7 @@ var score = 0
 func _ready() -> void:
 	# If we haven't already passed level 1, show the tutorial
 	if Global.levels_unlocked == 0:
-		var tutorial = level_1_tutorial.instantiate()
+		var tutorial = tutorial.instantiate()
 		add_child(tutorial)
 
 

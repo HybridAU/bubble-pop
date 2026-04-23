@@ -1,7 +1,7 @@
 extends Node
 var bubble = preload("res://scenes/bubbles/bubble.tscn")
 var bomb = preload("res://scenes/bubbles/bomb.tscn")
-var level_2_tutorial = preload("res://scenes/tutorials/level_2_tutorial.tscn")
+var tutorial = preload("res://scenes/tutorials/level_2_tutorial.tscn")
 
 @onready var label: Label = $"../ScoreLabel"
 
@@ -10,7 +10,7 @@ var score = 0
 func _ready() -> void:
 	# If we haven't already passed level 2, show the tutorial
 	if Global.levels_unlocked < 3:
-		var tutorial = level_2_tutorial.instantiate()
+		var tutorial = tutorial.instantiate()
 		add_child(tutorial)
 
 func _on_bubble_spawn_timer_timeout() -> void:

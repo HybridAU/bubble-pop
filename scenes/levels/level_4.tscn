@@ -8,7 +8,7 @@
 [node name="BaseLevel" parent="." unique_id=783011445 instance=ExtResource("1_vmkp1")]
 
 [node name="ScoreLabel" parent="BaseLevel" index="1" unique_id=1211637556]
-text = "0/500"
+text = "0/2000"
 
 [node name="Level4" type="Node" parent="BaseLevel" unique_id=132102969]
 script = ExtResource("2_vmkp1")

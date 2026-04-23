@@ -4,7 +4,7 @@ var bomb = preload("res://scenes/bubbles/bomb.tscn")
 var freeze = preload("res://scenes/bubbles/freeze.tscn")
 var vortex = preload("res://scenes/bubbles/vortex.tscn")
 
-var level_3_tutorial = preload("res://scenes/tutorials/level_3_tutorial.tscn")
+var tutorial = preload("res://scenes/tutorials/level_4_tutorial.tscn")
 
 @onready var label: Label = $"../ScoreLabel"
 
@@ -12,8 +12,7 @@ var score = 0
 
 func _ready() -> void:
 	if Global.levels_unlocked < 5:
-		# TODO level 4 tutorial
-		var tutorial = level_3_tutorial.instantiate()
+		var tutorial = tutorial.instantiate()
 		add_child(tutorial)
 
 func _on_bubble_spawn_timer_timeout() -> void:
@@ -43,8 +42,8 @@ func spawn_bubble() -> void:
 	
 func add_point():
 	score += 1
-	label.text = "{score}/500".format({"score": score})
+	label.text = "{score}/2000".format({"score": score})
 	# TODO build a level 5, and then change this to >=
-	if score == 500:
-		Global.levels_unlocked = 4
+	if score == 2000:
+		Global.levels_unlocked = 5
 		Global.save_settings()
